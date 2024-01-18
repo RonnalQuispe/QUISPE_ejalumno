@@ -9,20 +9,46 @@ struct alumno {
     float promedio;
 }
 ;
-void ingresarDatos(struct alumno *alumnos, int n) {
+void ingresarDatos(struct alumno *alumnos, int n) {// funcion ingresar datos 
     for (int i = 0; i < n; i++) {
-        printf("\n");
-        printf("Ingrese los datos del alumno %d:\n", i+1);
         printf("Matricula: ");
         scanf("%d", &(alumnos[i].matricula));
+        fflush(stdin); // Limpiar el buffer del teclado
+
         printf("Nombre: ");
-        scanf("%s", alumnos[i].nombre);
+        gets(alumnos[i].nombre);
+        fflush(stdin);
+
         printf("Direccion: ");
-        scanf("%s", alumnos[i].direccion);
+        gets(alumnos[i].direccion);
+        fflush(stdin);
+
         printf("Carrera: ");
-        scanf("%s", alumnos[i].carrera);
+        gets(alumnos[i].carrera);
+        fflush(stdin);
+
         printf("Promedio: ");
         scanf("%f", &(alumnos[i].promedio));
-        getchar(); // Limpiar el teclado
+        fflush(stdin);
     }
+}
+void imprimirDatos(struct alumno *alumnos, int n) {// funcion imprimir datos 
+    for (int i = 0; i < n; i++) {
+        printf("Datos del alumno %d:\n", i+1);
+        printf("Matricula: %d\n", alumnos[i].matricula);
+        printf("Nombre: %s\n", alumnos[i].nombre);
+        printf("Dirección: %s\n", alumnos[i].direccion);
+        printf("Carrera: %s\n", alumnos[i].carrera);
+        printf("Promedio: %.2f\n", alumnos[i].promedio);
+        printf("\n");
+    }
+}
+int main() {
+    int n;
+    printf("Ingrese el numero de alumnos: "); // Solicita al usuario que ingrese el numero de alumnos
+    scanf("%d", &n); 
+    getchar(); // Limpia teclado
+
+    
+    return 0; 
 }
