@@ -50,8 +50,13 @@ int main() {
     int n;
     printf("Ingrese el numero de alumnos: "); // Solicita al usuario que ingrese el numero de alumnos
     scanf("%d", &n); 
-    getchar(); // Limpia teclado
+    fflush(stdin); // Limpiar el buffer del teclado
+// Reserva de memoria para el arreglo de estructuras "alumno"
+struct alumno *alumnos = malloc(n * sizeof(struct alumno));
+    ingresarDatos(alumnos, n);
 
+    int opcion;
+    // se crea el menu principal 
     
     return 0; 
 }
