@@ -74,13 +74,16 @@ struct alumno *alumnos = malloc(n * sizeof(struct alumno));
                 // Imprimir datos de todos los alumnos
                 imprimirDatos(alumnos, n);
                 break;
-            
+            case 2:
+                // Salir del programa
+                printf("Saliendo del programa...\n");
+                break;
             default:
-                // Opción inválida
+                //opcion invalida 
                 printf("Opción invalida\n");
                 break;
         }
-    } while (opcion != 1); // Repetir el menu hasta que se elija la opcion 1
+    } while (opcion != 2); // Repetir el menu hasta que se elija la opcion 1
 
     // Liberar la memoria asignada
     free(alumnos);
