@@ -33,12 +33,15 @@ void ingresarDatos(struct alumno *alumnos, int n) {// funcion ingresar datos
     }
 }
 void imprimirDatos(struct alumno *alumnos, int n) {// funcion imprimir datos 
-    for (int i = 0; i < n; i++) {
-        printf("Datos del alumno %d:\n", i+1);
+     for (int i = 0; i < n; i++) {
+        printf("Datos del alumno %d:\n", i + 1);
         printf("Matricula: %d\n", alumnos[i].matricula);
-        printf("Nombre: %s\n", alumnos[i].nombre);
-        printf("Dirección: %s\n", alumnos[i].direccion);
-        printf("Carrera: %s\n", alumnos[i].carrera);
+        printf("Nombre: ");
+        puts(alumnos[i].nombre);
+        printf("Dirección: ");
+        puts(alumnos[i].direccion);
+        printf("Carrera: ");
+        puts(alumnos[i].carrera);
         printf("Promedio: %.2f\n", alumnos[i].promedio);
         printf("\n");
     }
