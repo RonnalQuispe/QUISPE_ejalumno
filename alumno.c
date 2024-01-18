@@ -83,7 +83,7 @@ struct alumno *alumnos = malloc(n * sizeof(struct alumno));
                 printf("Opción invalida\n");
                 break;
         }
-    } while (opcion != 2); // Repetir el menu hasta que se elija la opcion 1
+    } while (opcion != 2); // Repetir el menu hasta que se elija la opcion 2
 
     // Liberar la memoria asignada
     free(alumnos);
