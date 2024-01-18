@@ -11,6 +11,7 @@ struct alumno {
 ;
 void ingresarDatos(struct alumno *alumnos, int n) {// funcion ingresar datos 
     for (int i = 0; i < n; i++) {
+        printf("Ingrese los datos del alumno %d:\n", i + 1);
         printf("Matricula: ");
         scanf("%d", &(alumnos[i].matricula));
         fflush(stdin); // Limpiar el buffer del teclado
@@ -61,10 +62,10 @@ struct alumno *alumnos = malloc(n * sizeof(struct alumno));
     
 
     do {
-        printf("Menú:\n");
+        printf("Menu:\n");
         printf("1. Imprimir datos de todos los alumnos\n");
         printf("2. Salir\n");
-        printf("Ingrese una opción: ");
+        printf("Ingrese una opcion: ");
         scanf("%d", &opcion);
         fflush(stdin); 
 
@@ -80,7 +81,7 @@ struct alumno *alumnos = malloc(n * sizeof(struct alumno));
                 break;
             default:
                 //opcion invalida 
-                printf("Opción invalida\n");
+                printf("Opcion invalida\n");
                 break;
         }
     } while (opcion != 2); // Repetir el menu hasta que se elija la opcion 2
